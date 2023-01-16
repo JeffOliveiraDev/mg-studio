@@ -68,7 +68,7 @@ export const StyledGlobal = createGlobalStyle`
 
    
   .BtnContact:hover {
-    transform: scale(1.3);
+    transform: scale(1.3) translate(5px);
   }
     body::-webkit-scrollbar {
     width: 16px;
@@ -76,11 +76,11 @@ export const StyledGlobal = createGlobalStyle`
 }
 
     body::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#434343,#434343 1px,#111 0,#111);
+    background: linear-gradient(90deg, var(--dark-brown), var(--dark-brown), 1px,#111 0,#111);
 }
 
     body::-webkit-scrollbar-thumb {
-    background: #434343;
+    background: var(--light-brown);
     border-radius: 16px;
     box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
 }
