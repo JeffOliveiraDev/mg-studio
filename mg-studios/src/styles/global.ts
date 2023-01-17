@@ -23,13 +23,15 @@ export const StyledGlobal = createGlobalStyle`
         /* Colors */
 
         /* Primary */
-
+        --background-cards: #e1d7ca;
+        --card: #f7f6f2;
         --light: #e6dfd8;
         --light-brown: #a08d7a;
         --dark-brown: #3e3524;
         --light-dark: #675338;
         --footer: #57412f;
         --orange: #f4844c;
+        
 
 
         /* Secondary */

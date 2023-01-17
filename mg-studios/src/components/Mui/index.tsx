@@ -1,120 +1,78 @@
-import { styled } from "@mui/material/styles";
+import * as React from "react";
 import Box from "@mui/material/Box";
-import ButtonBase from "@mui/material/ButtonBase";
-import Typography from "@mui/material/Typography";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
 
-const images = [
-  {
-    url: "/static/images/buttons/burgers.jpg",
-    title: "Burgers",
-    width: "30%",
-  },
-];
-
-const ImageButton = styled(ButtonBase)(({ theme }) => ({
-  position: "relative",
-  height: 200,
-  [theme.breakpoints.down("sm")]: {
-    width: "100% !important", // Overrides inline-style
-    height: 100,
-  },
-  "&:hover, &.Mui-focusVisible": {
-    zIndex: 1,
-    "& .MuiImageBackdrop-root": {
-      opacity: 0.15,
-    },
-    "& .MuiImageMarked-root": {
-      opacity: 0,
-    },
-    "& .MuiTypography-root": {
-      border: "4px solid currentColor",
-    },
-  },
-}));
-
-const ImageSrc = styled("span")({
-  position: "absolute",
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  backgroundSize: "cover",
-  backgroundPosition: "center 40%",
-});
-
-const Image = styled("span")(({ theme }) => ({
-  position: "absolute",
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: theme.palette.common.white,
-}));
-
-const ImageBackdrop = styled("span")(({ theme }) => ({
-  position: "absolute",
-  left: 0,
-  right: 0,
-  top: 0,
-  bottom: 0,
-  backgroundColor: theme.palette.common.black,
-  opacity: 0.4,
-  transition: theme.transitions.create("opacity"),
-}));
-
-const ImageMarked = styled("span")(({ theme }) => ({
-  height: 3,
-  width: 18,
-  backgroundColor: theme.palette.common.white,
-  position: "absolute",
-  bottom: -2,
-  left: "calc(50% - 9px)",
-  transition: theme.transitions.create("opacity"),
-}));
-
-export default function ButtonBases() {
+export default function MasonryImageList() {
   return (
     <Box
-      sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        minWidth: 300,
-        width: "100%",
-        zIndex: 3,
-      }}
+      className="ImageList"
+      sx={{ width: 500, height: 450, overflowY: "scroll" }}
     >
-      {images.map((image) => (
-        <ImageButton
-          focusRipple
-          key={image.title}
-          style={{
-            width: image.width,
-          }}
-        >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
-          <ImageBackdrop className="MuiImageBackdrop-root" />
-          <Image>
-            <Typography
-              component="span"
-              variant="subtitle1"
-              color="inherit"
-              sx={{
-                position: "relative",
-                p: 4,
-                pt: 2,
-                pb: (theme: { spacing: (arg0: number) => any }) =>
-                  `calc(${theme.spacing(1)} + 6px)`,
-              }}
-            >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
-          </Image>
-        </ImageButton>
-      ))}
+      <ImageList variant="masonry" cols={3} gap={8}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              className="Image"
+              src={`${item.img}?w=248&fit=crop&auto=format`}
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              alt={item.title}
+              loading="lazy"
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
     </Box>
   );
 }
+
+const itemData = [
+  {
+    img: "https://images.unsplash.com/photo-1549388604-817d15aa0110",
+    title: "Bed",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1525097487452-6278ff080c31",
+    title: "Books",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6",
+    title: "Sink",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3",
+    title: "Kitchen",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1588436706487-9d55d73a39e3",
+    title: "Blinds",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1574180045827-681f8a1a9622",
+    title: "Chairs",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1530731141654-5993c3016c77",
+    title: "Laptop",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1481277542470-605612bd2d61",
+    title: "Doors",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7",
+    title: "Coffee",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee",
+    title: "Storage",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62",
+    title: "Candle",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+    title: "Coffee table",
+  },
+];

@@ -39,6 +39,7 @@ export const StyledDashboard = styled.div`
     transition: all 0.3s;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
   }
+
   .BoxBtns button:hover {
     transform: scale(1.3);
   }
@@ -78,7 +79,8 @@ export const StyledDashboard = styled.div`
     color: var(--orange);
   }
   .BoxLeftBackGround {
-    background-color: #a08d7a80;
+    background-color: rgb(176, 163, 152, 0.7);
+    /* background-color: #a08d7a80; */
     z-index: 1;
     position: absolute;
     width: fit-content;
@@ -224,37 +226,46 @@ export const StyledDashboard = styled.div`
     color: var(--dark-brown);
   }
 
+  /* ABOUT US */
+
   .BoxAboutUs {
     width: 80%;
-    height: 575px;
+    height: 80%;
     margin: auto;
     display: flex;
-    gap: 20px;
+
+    justify-content: space-between;
   }
-  /* .BoxImgAboutUs {
-    width: 50%;
-    height: 70%;
-  } */
+  .BoxAboutAndHow {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .BoxImgAboutUs {
+    width: 45%;
+    height: 100%;
+    display: flex;
+  }
   .BoxImgAboutUs img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    max-height: 580px;
   }
   .BoxTextAboutUs {
     width: 50%;
-    height: fit-content;
-    object-fit: cover;
-    object-position: center;
+    height: 100%;
     display: flex;
     flex-direction: column;
   }
-  @media (max-width: 910px) {
+  @media (max-width: 1080px) {
     .BoxAboutUs {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      height: 100%;
     }
     .BoxImgAboutUs {
       height: 70%;
@@ -262,6 +273,7 @@ export const StyledDashboard = styled.div`
     }
     .BoxTextAboutUs {
       width: 80%;
+      height: 100%;
     }
   }
   .BoxTextAboutUs h4 {
@@ -282,16 +294,13 @@ export const StyledDashboard = styled.div`
   .CheckList {
     display: flex;
     width: 100%;
+    height: 100%;
     justify-content: center;
     gap: 60px;
     margin-top: 20px;
+    align-items: flex-end;
   }
 
-  .ChecklistLeft {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
   .ChecklistLeft h4,
   svg {
     display: flex;
@@ -317,9 +326,10 @@ export const StyledDashboard = styled.div`
   .BoxExperienceClients {
     display: flex;
     width: 80%;
+    height: 100%;
     margin: auto;
     margin-top: 20px;
-
+    align-items: flex-end;
     justify-content: space-between;
     color: var(--dark-brown);
     font-weight: 800;
@@ -345,6 +355,110 @@ export const StyledDashboard = styled.div`
     flex-direction: column;
     align-items: center;
   }
+  /* END ABOUT US */
+
+  /* Procedures */
+
+  .BoxProcedures {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    background-color: var(--background-cards);
+  }
+  .HowWeWork {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+  }
+  .HowWeWork h4 {
+    color: var(--light-brown);
+    font-size: var(--font-16);
+  }
+  .HowWeWork h2 {
+    color: var(--dark-brown);
+    font-size: var(--font-24);
+  }
+  .CardsHowWeWork {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .CardWork {
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: var(--card);
+    display: flex;
+    flex-direction: column;
+    line-height: 24px;
+  }
+  .CardWork svg {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+  .CardWork h3 {
+    font-size: var(--font-18);
+    color: var(--dark-brown);
+  }
+  .CardWork p {
+    font-size: var(--font-16);
+    color: var(--dark-brown);
+  }
+  /* END HOWWEWORK */
+  /* OUR WORK IMGS */
+  .OurWorks {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .OurWorks h2 {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    color: var(--dark-brown);
+  }
+
+  /* END OF WORK IMGS */
+
+  .ContainerCarousel {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    transition: all 0.4s;
+    justify-content: center;
+  }
+  .ContainerCarousel img {
+    width: 340px;
+    height: 250px;
+    transition: all 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    background-color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+  .ContainerCarousel img:hover {
+    transform: scale(1.5);
+    border: solid 1px var(--card);
+    box-shadow: 0px 0px 4px 4px var(--light);
+    left: 50%;
+  }
+
+  /*  */
 `;
 // --font-62: 3.875rem;
 //         --font-32: 2rem;

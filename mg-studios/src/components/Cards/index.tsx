@@ -1,4 +1,3 @@
-import React from "react";
 import ap37 from "../../assets/apto industrial-37.jpg";
 import { FaAngleRight } from "react-icons/fa";
 

@@ -24,6 +24,13 @@ export const AboutUs = () => {
           laborum voluptatem suscipit est.
         </p>
 
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          velit quod saepe excepturi consectetur voluptatibus pariatur,
+          doloribus est dicta architecto aliquid dolore at hic! Repudiandae iste
+          laborum voluptatem suscipit est.
+        </p>
+
         <div className="CheckList">
           <div className="ChecklistLeft">
             <h4>
