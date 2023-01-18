@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundHeader from "../../assets/apto industrial.jpg";
+import backgroundHeader from "../../assets/apto industrial-min.jpg";
 import { FaAngleRight, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const InsideHeader = () => {
@@ -30,7 +30,7 @@ export const InsideHeader = () => {
               </a>
             </div>
 
-            <a href="" className="BtnContact">
+            <a href="" className="BtnContact AnchorOurWorks">
               Nossos Trabalhos
             </a>
           </div>

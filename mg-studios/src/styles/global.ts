@@ -28,29 +28,11 @@ export const StyledGlobal = createGlobalStyle`
         --light: #e6dfd8;
         --light-brown: #a08d7a;
         --dark-brown: #3e3524;
+        --footer-brown: #5c4c3a;
         --light-dark: #675338;
         --footer: #57412f;
         --orange: #f4844c;
         
-
-
-        /* Secondary */
-
-        --Color-background-dark: #1d1e22;
-
-        --Color-black: #01080E;
-        --Color-teal: #00ADB5;
-        --Color-white-text: #EEEEEE;
-        --Color-white: #FFFFFF;
-        --Color-grey: #393E46;
-        --Color-line: rgba(238, 238, 238, 0.1);
-        
-        /* Alerts */
-    
-        --Sucess: #168821;
-        --Warning: #FFCD07;
-        --Negative: #E60000;
-        --Information: #155BCB;
 
     }
 

@@ -1,5 +1,5 @@
 import { AiFillCheckCircle } from "react-icons/ai";
-import img18 from "../../assets/apto industrial-18.jpg";
+import img18 from "../../assets/apto industrial-18-min.jpg";
 
 export const AboutUs = () => {
   return (

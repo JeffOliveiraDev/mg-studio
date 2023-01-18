@@ -1,29 +1,59 @@
 import { StyledDashboard } from "./style";
-import { motion } from "framer-motion";
 import { BoxCardsHeader } from "../../components/Cards";
 import { InsideHeader } from "../../components/HeaderAbout";
 import { Header } from "../../components/Header";
 import { AboutUs } from "../../components/AboutUs";
-import { TiArrowRightThick, TiArrowLeftThick } from "react-icons/ti";
-
 import { HowWeWork } from "../../components/HowWeWork";
-
-import { render } from "react-dom";
-import { WorkImgs } from "../../components/WorkImgs";
+import { WorkImgsSlider } from "../../components/WorkImgs";
+import { WorkImgs } from "../../components/WorkImgs/workimgs";
+import { Review } from "../../components/Review";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const Dashboard = () => {
   return (
     <StyledDashboard>
       <Header />
+
       <InsideHeader />
       <BoxCardsHeader />
       <div className="BoxAboutAndHow">
         <AboutUs />
         <HowWeWork />
+        <WorkImgsSlider />
         <WorkImgs />
-
-        <section className="SayingAboutUs"></section>
+        <Review />
+        <section className="ContactUsBottom">
+          <div className="InsideFooter">
+            <h2>TORNE SUA CASA EM UM LAR MELHOR AINDA COM NOSSOS DESIGNS</h2>
+            <button className="BtnContactFooter">ENTRE EM CONTATO</button>
+          </div>
+        </section>
       </div>
+
+      <footer>
+        <div className="BoxInsideFooter">
+          <div className="FooterLeft">
+            <h1>
+              Mg <span>S</span>tudio
+            </h1>
+          </div>
+          <div className="FooterRight">
+            <h2>NOS CONTATE</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+              voluptate velit cumque cupiditate eum.
+            </p>
+            <div className="FooterIcons">
+              <a href="">
+                <FaInstagram />
+              </a>
+              <a href="">
+                <FaWhatsapp />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </StyledDashboard>
   );
 };

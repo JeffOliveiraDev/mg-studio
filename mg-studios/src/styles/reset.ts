@@ -14,10 +14,21 @@ export const StyledReset = createGlobalStyle`
     border: none;
     background-color: none;
     background: none;
+    text-decoration: none;
   }
+  button:focus {
+   
+    outline: none;
+    
+}
 
   a {
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    background: none;
     text-decoration: none;
+    
   }
 
   ul,

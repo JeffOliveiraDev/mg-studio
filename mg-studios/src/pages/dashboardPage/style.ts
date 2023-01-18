@@ -18,13 +18,23 @@ export const StyledDashboard = styled.div`
     margin: auto;
     align-items: center;
     justify-content: space-between;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  }
+  @media (max-width: 620px) {
+    .BoxHeader {
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      height: fit-content;
+      padding-bottom: 10px;
+    }
   }
   .BoxHeader span {
     color: var(--orange);
   }
   .TitleHeader {
-    color: var(--dark-brown);
+    color: var(--light);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
   }
   .TitleHeader img {
     width: 200px;
@@ -34,7 +44,7 @@ export const StyledDashboard = styled.div`
     gap: 20px;
   }
   .BoxBtns button {
-    color: var(--Color-white);
+    color: var(--light);
     font-size: 12px;
     transition: all 0.3s;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
@@ -42,6 +52,11 @@ export const StyledDashboard = styled.div`
 
   .BoxBtns button:hover {
     transform: scale(1.3);
+  }
+  .BoxBtns button:focus {
+    transform: scale(1.3);
+    color: var(--orange);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
   }
   .HeaderAbout {
     width: 100%;
@@ -67,19 +82,19 @@ export const StyledDashboard = styled.div`
   }
 
   .BoxLeftAbout {
+    display: flex;
     width: 80%;
     height: 50%;
     margin: auto;
     margin-top: 120px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
     padding: 20px;
-    border-radius: 30px;
   }
   .BoxLeftAbout span {
     color: var(--orange);
   }
   .BoxLeftBackGround {
-    background-color: rgb(176, 163, 152, 0.7);
+    background-color: rgb(176, 163, 152, 0.8);
     /* background-color: #a08d7a80; */
     z-index: 1;
     position: absolute;
@@ -88,6 +103,13 @@ export const StyledDashboard = styled.div`
     height: fit-content;
     padding: 20px;
     border-radius: 20px;
+    box-shadow: 0 0 16px #333;
+    /* background-color: rgba(0, 0, 0, 0.75); */
+  }
+  @media (max-width: 600px) {
+    .BoxLeftAbout {
+      justify-content: center;
+    }
   }
   .BoxLeftAbout h3,
   h2 {
@@ -112,8 +134,7 @@ export const StyledDashboard = styled.div`
   }
   .ContactIcons {
     display: flex;
-    margin-top: 10px;
-    gap: 15px;
+    gap: 10px;
   }
   .ContactIcons a {
     color: var(--light);
@@ -126,11 +147,16 @@ export const StyledDashboard = styled.div`
   }
   .ContactIcons a:hover {
     transform: scale(1.3);
+    text-decoration: none;
+  }
+  .AnchorOurWorks {
+    margin-top: 20px;
   }
   .BoxLeftAbout a {
-    margin-top: 20px;
     font-size: var(--font-14);
     font-weight: 600;
+    color: var(--light);
+    text-decoration: none;
   }
   .BoxCards {
     width: 80%;
@@ -142,6 +168,7 @@ export const StyledDashboard = styled.div`
     z-index: 1;
     align-items: flex-end;
   }
+
   .CardLeft {
     width: 33.3%;
     height: 90%;
@@ -156,6 +183,8 @@ export const StyledDashboard = styled.div`
     height: 100%;
     background-color: var(--light-brown);
     border-radius: 20px;
+    box-shadow: 0 0 16px #333;
+    z-index: 2;
   }
   .CardMiddle img {
     width: 100%;
@@ -189,6 +218,7 @@ export const StyledDashboard = styled.div`
   }
 
   .CardMiddleTitleArrow svg {
+    color: var(--light);
     font-size: 2rem;
   }
 
@@ -201,12 +231,15 @@ export const StyledDashboard = styled.div`
   .CardRight:hover {
     box-shadow: 0px 0px 4px 4px var(--light);
   }
+
   .InsideCard {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 20px;
     justify-content: space-between;
+    box-shadow: 0 0 16px #333;
+    border-radius: 20px;
   }
   .InsideCard h3 {
     color: var(--dark-brown);
@@ -220,6 +253,7 @@ export const StyledDashboard = styled.div`
     align-items: center;
     color: var(--dark-brown);
     transition: all 0.3s;
+    text-decoration: none;
   }
   .InsideCard a:hover {
     transform: scale(1.1) translate(10px);
@@ -235,6 +269,47 @@ export const StyledDashboard = styled.div`
     display: flex;
 
     justify-content: space-between;
+  }
+  @media (max-width: 840px) {
+    .BoxCards {
+      /* height: fit-content; */
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .CardLeft {
+      width: 100%;
+    }
+    .CardMiddle {
+      width: 100%;
+      height: 50%;
+    }
+    .CardRight {
+      width: 100%;
+    }
+    .BoxAboutUs {
+      margin-top: 10%;
+    }
+  }
+  @media (max-width: 660px) {
+    .BoxAboutUs {
+      margin-top: 18%;
+    }
+  }
+  @media (max-width: 605px) {
+    .BoxAboutUs {
+      margin-top: 40%;
+    }
+  }
+  @media (max-width: 450px) {
+    .BoxAboutUs {
+      margin-top: 50%;
+    }
+  }
+  @media (max-width: 420px) {
+    .BoxAboutUs {
+      margin-top: 60%;
+    }
   }
   .BoxAboutAndHow {
     display: flex;
@@ -252,6 +327,8 @@ export const StyledDashboard = styled.div`
     object-fit: cover;
     object-position: center;
     max-height: 580px;
+    box-shadow: 0 0 16px #333;
+    background-color: rgba(0, 0, 0, 0.75);
   }
   .BoxTextAboutUs {
     width: 50%;
@@ -274,6 +351,7 @@ export const StyledDashboard = styled.div`
     .BoxTextAboutUs {
       width: 80%;
       height: 100%;
+      margin-top: 30px;
     }
   }
   .BoxTextAboutUs h4 {
@@ -420,12 +498,14 @@ export const StyledDashboard = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
   }
   .OurWorks h2 {
+    color: var(--dark-brown);
+    font-size: 2rem;
+    font-weight: 800;
     width: 80%;
     margin: auto;
-    margin-top: 40px;
-    color: var(--dark-brown);
   }
 
   /* END OF WORK IMGS */
@@ -456,6 +536,243 @@ export const StyledDashboard = styled.div`
     border: solid 1px var(--card);
     box-shadow: 0px 0px 4px 4px var(--light);
     left: 50%;
+  }
+
+  /*  */
+  .carousel {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  @media (min-width: 800px) {
+    .carousel,
+    .slide {
+      display: none;
+    }
+    .OurWorks {
+      display: show;
+    }
+  }
+  @media (max-width: 800px) {
+    .OurWorks {
+      display: none;
+    }
+  }
+  .carousel h2 {
+    color: var(--dark-brown);
+    font-size: 2rem;
+    font-weight: 800;
+    width: 80%;
+    margin: auto;
+  }
+
+  .carousel-inner {
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    transition: all 0.3s;
+    box-shadow: 0 0 16px #333;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-item img {
+    /* width: 340px; */
+    height: 100%;
+    transition: all 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 0 16px #333;
+    background-color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+  }
+  .carousel-inner:hover {
+    transform: scale(1.2);
+  }
+  .carousel-item img:hover {
+    border: solid 1px var(--card);
+    box-shadow: 0px 0px 4px 4px var(--light);
+    left: 50%;
+  }
+
+  /* SAYING ABOUT US */
+  .SayingAboutUs {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--background-cards);
+    padding-bottom: 40px;
+  }
+  .BoxCardsAboutUs {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .BoxCardsAboutUs > h2 {
+    color: var(--dark-brown);
+  }
+  .ListCardsAboutUs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 30px;
+  }
+  .CardAboutUs {
+    background-color: var(--card);
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+  }
+  @media (max-width: 829px) {
+    .SayingAboutUs {
+      height: fit-content;
+    }
+    .ListCardsAboutUs {
+      justify-content: center;
+    }
+  }
+  .InsideCardText {
+    display: flex;
+
+    border-left: 3px solid var(--dark-brown);
+    gap: 10px;
+  }
+  .CardAboutUs h3 {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: var(--font-12);
+    color: var(--dark-brown);
+  }
+  .InsideCardPhotoImgData {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  .InsideCardPhotoImgData img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    margin-top: 10px;
+  }
+  .InsideCardNameJob {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .InsideCardNameJob h6 {
+    font-size: var(--font-12);
+    line-height: 0;
+    color: var(--dark-brown);
+  }
+  .InsideCardStars {
+    display: flex;
+  }
+
+  /*  */
+  /* ContactUsBottom */
+
+  .ContactUsBottom {
+    width: 100%;
+    height: 526px;
+  }
+  .InsideFooter {
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .InsideFooter h2 {
+    color: var(--dark-brown);
+    font-weight: 700;
+  }
+  .BtnContactFooter {
+    padding: 15px 30px;
+
+    display: flex;
+    width: fit-content;
+    background-color: var(--dark-brown);
+    border-radius: 35px;
+    font-weight: 500;
+
+    color: var(--light);
+    font-size: var(--font-16);
+    transition: all 0.3s;
+    box-shadow: 0 0 16px #333;
+  }
+
+  .BtnContactFooter:hover {
+    transform: scale(1.3);
+  }
+
+  /*  */
+  /* FOOTER */
+  footer {
+    width: 100%;
+    height: 300px;
+    background-color: var(--footer-brown);
+  }
+  .BoxInsideFooter {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .FooterLeft {
+    width: 50%;
+  }
+  .FooterRight {
+    color: var(--light);
+    width: 30%;
+  }
+  .FooterRight h2 {
+    font-size: var(--font-14);
+    line-height: 10px;
+  }
+  .FooterRight p {
+    font-size: var(--font-12);
+  }
+  .FooterIcons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .FooterIcons a {
+    transition: all 0.3s;
+  }
+  .FooterIcons svg {
+    cursor: pointer;
+    color: var(--light);
+    width: 20px;
+    height: 20px;
+  }
+  .FooterIcons a:hover {
+    transform: scale(1.3);
+    text-decoration: none;
+  }
+  .FooterLeft {
+    color: var(--light);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .FooterLeft span {
+    color: var(--orange);
   }
 
   /*  */
