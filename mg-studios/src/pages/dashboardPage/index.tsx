@@ -15,8 +15,9 @@ export const Dashboard = () => {
       <Header />
 
       <InsideHeader />
-      <BoxCardsHeader />
       <div className="BoxAboutAndHow">
+        <BoxCardsHeader />
+
         <AboutUs />
         <HowWeWork />
         <WorkImgsSlider />
@@ -25,7 +26,13 @@ export const Dashboard = () => {
         <section className="ContactUsBottom">
           <div className="InsideFooter">
             <h2>TORNE SUA CASA EM UM LAR MELHOR AINDA COM NOSSOS DESIGNS</h2>
-            <button className="BtnContactFooter">ENTRE EM CONTATO</button>
+            <a
+              target={"http://bit.ly/michellerosa"}
+              href="http://bit.ly/michellerosa"
+              className="BtnContactFooter"
+            >
+              ENTRE EM CONTATO
+            </a>
           </div>
         </section>
       </div>
@@ -44,10 +51,16 @@ export const Dashboard = () => {
               voluptate velit cumque cupiditate eum.
             </p>
             <div className="FooterIcons">
-              <a href="">
+              <a
+                target={"https://www.instagram.com/mgstudiomoveis/"}
+                href="https://www.instagram.com/mgstudiomoveis/"
+              >
                 <FaInstagram />
               </a>
-              <a href="">
+              <a
+                target={"http://bit.ly/michellerosa"}
+                href="http://bit.ly/michellerosa"
+              >
                 <FaWhatsapp />
               </a>
             </div>

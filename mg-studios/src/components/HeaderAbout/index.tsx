@@ -22,15 +22,21 @@ export const InsideHeader = () => {
               moderno.
             </p>
             <div className="ContactIcons">
-              <a href="">
+              <a
+                target={"https://www.instagram.com/mgstudiomoveis/"}
+                href="https://www.instagram.com/mgstudiomoveis/"
+              >
                 <FaInstagram />
               </a>
-              <a href="">
+              <a
+                target={"http://bit.ly/michellerosa"}
+                href="http://bit.ly/michellerosa"
+              >
                 <FaWhatsapp />
               </a>
             </div>
 
-            <a href="" className="BtnContact AnchorOurWorks">
+            <a href="#works" className="BtnContact AnchorOurWorks">
               Nossos Trabalhos
             </a>
           </div>

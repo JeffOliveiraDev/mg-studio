@@ -42,18 +42,20 @@ export const StyledDashboard = styled.div`
   .BoxBtns {
     display: flex;
     gap: 20px;
+    align-items: center;
   }
-  .BoxBtns button {
+  .BoxBtns a {
+    text-decoration: none;
     color: var(--light);
     font-size: 12px;
     transition: all 0.3s;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
   }
 
-  .BoxBtns button:hover {
+  .BoxBtns a:hover {
     transform: scale(1.3);
   }
-  .BoxBtns button:focus {
+  .BoxBtns a:focus {
     transform: scale(1.3);
     color: var(--orange);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
@@ -111,6 +113,22 @@ export const StyledDashboard = styled.div`
       justify-content: center;
     }
   }
+  @media (max-width: 424px) {
+    .BoxLeftAbout {
+      margin-top: 60px;
+    }
+  }
+  @media (max-width: 310px) {
+    .BoxLeftAbout {
+      margin-top: 30px;
+    }
+  }
+  @media (max-width: 294px) {
+    .BoxLeftAbout {
+      margin-top: 0px;
+    }
+  }
+
   .BoxLeftAbout h3,
   h2 {
     line-height: 40px;
@@ -125,7 +143,9 @@ export const StyledDashboard = styled.div`
     font-size: var(--font-24);
   }
   .BoxLeftAbout h4 {
-    color: var(--orange);
+    /* color: var(--light-dark); */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+    /* font-weight: 900; */
   }
   .BoxLeftAbout p {
     color: var(--light);
@@ -158,6 +178,10 @@ export const StyledDashboard = styled.div`
     color: var(--light);
     text-decoration: none;
   }
+  .BoxAboutAndHow {
+    position: relative;
+    top: -10%;
+  }
   .BoxCards {
     width: 80%;
     height: 300px;
@@ -167,6 +191,11 @@ export const StyledDashboard = styled.div`
     top: -10%;
     z-index: 1;
     align-items: flex-end;
+  }
+  @media (max-height: 815px) {
+    .BoxCards {
+      top: -5%;
+    }
   }
 
   .CardLeft {
@@ -267,7 +296,7 @@ export const StyledDashboard = styled.div`
     height: 80%;
     margin: auto;
     display: flex;
-
+    margin-top: 40px;
     justify-content: space-between;
   }
   @media (max-width: 840px) {
@@ -288,29 +317,40 @@ export const StyledDashboard = styled.div`
       width: 100%;
     }
     .BoxAboutUs {
-      margin-top: 10%;
+      margin-top: 150px;
     }
   }
-  @media (max-width: 660px) {
+
+  @media (max-width: 662px) {
     .BoxAboutUs {
-      margin-top: 18%;
+      margin-top: 200px;
     }
   }
-  @media (max-width: 605px) {
+  @media (max-width: 615px) {
     .BoxAboutUs {
-      margin-top: 40%;
+      margin-top: 280px;
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 405px) {
     .BoxAboutUs {
-      margin-top: 50%;
+      margin-top: 320px;
     }
   }
-  @media (max-width: 420px) {
+  @media (max-width: 357px) {
     .BoxAboutUs {
-      margin-top: 60%;
+      margin-top: 380px;
     }
   }
+  @media (max-width: 300px) {
+    .BoxAboutUs {
+      margin-top: 410px;
+    }
+  }
+  /* @media (max-width: 340px) {
+    .BoxAboutUs {
+      margin-top: 90%;
+    }
+  } */
   .BoxAboutAndHow {
     display: flex;
     flex-direction: column;
@@ -469,6 +509,12 @@ export const StyledDashboard = styled.div`
     gap: 20px;
     margin-bottom: 40px;
   }
+  @media (max-width: 750px) {
+    .CardsHowWeWork {
+      flex-direction: column;
+      width: 250px;
+    }
+  }
   .CardWork {
     padding: 20px;
     width: 100%;
@@ -525,12 +571,14 @@ export const StyledDashboard = styled.div`
   .ContainerCarousel img {
     width: 340px;
     height: 250px;
+    object-fit: fill;
     transition: all 0.3s;
     border-radius: 8px;
     box-shadow: 0 0 16px #333;
     background-color: rgba(0, 0, 0, 0.75);
     cursor: pointer;
   }
+
   .ContainerCarousel img:hover {
     transform: scale(1.5);
     border: solid 1px var(--card);
@@ -546,7 +594,7 @@ export const StyledDashboard = styled.div`
     margin-top: 50px;
     margin-bottom: 30px;
   }
-  @media (min-width: 800px) {
+  @media (min-width: 869px) {
     .carousel,
     .slide {
       display: none;
@@ -555,9 +603,12 @@ export const StyledDashboard = styled.div`
       display: show;
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 868px) {
     .OurWorks {
       display: none;
+    }
+    .carousel {
+      width: 95%;
     }
   }
   .carousel h2 {
@@ -581,8 +632,9 @@ export const StyledDashboard = styled.div`
     height: 100%;
   }
   .carousel-item img {
-    /* width: 340px; */
+    width: 100%;
     height: 100%;
+    object-fit: fill;
     transition: all 0.3s;
     border-radius: 8px;
     box-shadow: 0 0 16px #333;
@@ -723,7 +775,7 @@ export const StyledDashboard = styled.div`
   /* FOOTER */
   footer {
     width: 100%;
-    height: 300px;
+    height: 330px;
     background-color: var(--footer-brown);
   }
   .BoxInsideFooter {
@@ -733,6 +785,18 @@ export const StyledDashboard = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  @media (max-width: 380px) {
+    .BoxInsideFooter {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      padding-bottom: 50px;
+      padding-top: 30px;
+
+      gap: 10px;
+    }
   }
   .FooterLeft {
     width: 50%;
@@ -751,6 +815,17 @@ export const StyledDashboard = styled.div`
   .FooterIcons {
     display: flex;
     gap: 10px;
+  }
+  @media (max-width: 380px) {
+    .FooterRight {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+    }
+    .FooterIcons {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   .FooterIcons a {

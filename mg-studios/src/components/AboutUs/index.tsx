@@ -7,7 +7,7 @@ export const AboutUs = () => {
       <div className="BoxImgAboutUs">
         <img src={img18} alt="" />
       </div>
-      <div className="BoxTextAboutUs">
+      <div id="about" className="BoxTextAboutUs">
         <h4>QUEM SOMOS</h4>
         <h2>NÓS SOMOS O TIME PERFEITO PARA SUA CASA</h2>
         <p>

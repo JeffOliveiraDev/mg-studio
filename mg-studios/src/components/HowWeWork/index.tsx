@@ -9,7 +9,7 @@ export const HowWeWork = () => {
         <h4>COMO TRABALHAMOS</h4>
         <h2> NOSSO PROCEDIMENTO DE TRABALHO</h2>
       </div>
-      <div className="CardsHowWeWork">
+      <ul className="CardsHowWeWork">
         <li className="CardWork">
           <FaWhatsapp />
           <h3>ENTRANDO EM CONTATO</h3>
@@ -23,9 +23,9 @@ export const HowWeWork = () => {
         <li className="CardWork">
           <AiOutlineHome />
           <h3>TRABALHO FINAL</h3>
-          <p>Conversamos a respeito do projeto</p>
+          <p id="works">Conversamos a respeito do projeto</p>
         </li>
-      </div>
+      </ul>
     </section>
   );
 };
