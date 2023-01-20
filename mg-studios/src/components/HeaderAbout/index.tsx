@@ -1,6 +1,5 @@
-import React from "react";
-import backgroundHeader from "../../assets/apto industrial-min.jpg";
-import { FaAngleRight, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import backgroundHeader from "../../assets/apto industrial-min.webp";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export const InsideHeader = () => {
   return (

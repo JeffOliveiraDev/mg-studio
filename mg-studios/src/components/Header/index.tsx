@@ -1,8 +1,11 @@
+import logo from "../../assets/logo-removebg-preview.webp";
+
 export const Header = () => {
   return (
     <header>
       <section className="BoxHeader">
         <div id="home" className="TitleHeader">
+          {/* <img src={logo} alt="" /> */}
           <h1>
             Mg <span>S</span>tudio
           </h1>

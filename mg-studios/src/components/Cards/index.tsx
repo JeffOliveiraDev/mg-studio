@@ -1,4 +1,4 @@
-import ap37 from "../../assets/apto industrial-37-min.jpg";
+import ap37 from "../../assets/apto industrial-37-min.webp";
 import { FaAngleRight } from "react-icons/fa";
 
 export const BoxCardsHeader = () => {

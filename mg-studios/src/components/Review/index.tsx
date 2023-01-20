@@ -1,5 +1,5 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-import aa from "../../assets/apto industrial aa-min.jpg";
+import aa from "../../assets/apto industrial aa-min.webp";
 
 export const Review = () => {
   return (

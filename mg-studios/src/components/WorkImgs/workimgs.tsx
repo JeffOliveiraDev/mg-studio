@@ -1,7 +1,7 @@
-import ap24 from "../../assets/apto industrial 24c-min.jpg";
-import ap24d from "../../assets/apto industrial 24d-2-min.jpg";
-import aab from "../../assets/apto industrial aab-min.jpg";
-import aa from "../../assets/apto industrial aa-min.jpg";
+import ap24 from "../../assets/apto industrial 24c-min.webp";
+import ap24d from "../../assets/apto industrial 24d-2-min.webp";
+import aab from "../../assets/apto industrial aab-min.webp";
+import aa from "../../assets/apto industrial aa-min.webp";
 
 export const WorkImgs = () => {
   return (

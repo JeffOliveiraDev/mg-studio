@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { FaWhatsapp, FaPencilRuler } from "react-icons/fa";
 

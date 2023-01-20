@@ -752,6 +752,7 @@ export const StyledDashboard = styled.div`
     color: var(--dark-brown);
     font-weight: 700;
   }
+
   .BtnContactFooter {
     padding: 15px 30px;
 
@@ -765,6 +766,7 @@ export const StyledDashboard = styled.div`
     font-size: var(--font-16);
     transition: all 0.3s;
     box-shadow: 0 0 16px #333;
+    text-decoration: none;
   }
 
   .BtnContactFooter:hover {
