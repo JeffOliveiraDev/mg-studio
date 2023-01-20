@@ -9,9 +9,14 @@ export const InsideHeader = () => {
       <div className="BoxInsideAboutHeader">
         <div className="BoxLeftAbout">
           <div className="BoxLeftBackGround">
-            <h3>
-              BEM VINDO AO MG <span>S</span>TUDIO
-            </h3>
+            <div className="WelcomeMessage">
+              <h3>
+                BEM VINDO AO MG <span>S</span>TUDIO!
+              </h3>
+              <em>
+                <h3> Soluções em móveis Sob Medida!</h3>{" "}
+              </em>
+            </div>
             <h2>TRASFORME SEU LAR</h2>
             <h4>EM UM AMBIENTE </h4>
             <h2>PRÁTICO BONITO E REQUINTADO</h2>

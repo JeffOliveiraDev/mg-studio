@@ -1,14 +1,11 @@
-import logo from "../../assets/logo-removebg-preview.webp";
+import logo from "../../assets/logo-sem-fundo.png";
 
 export const Header = () => {
   return (
     <header>
       <section className="BoxHeader">
         <div id="home" className="TitleHeader">
-          {/* <img src={logo} alt="" /> */}
-          <h1>
-            Mg <span>S</span>tudio
-          </h1>
+          <img src={logo} alt="" />
         </div>
         <div className="BoxBtns">
           <a href="#home">HOME</a>

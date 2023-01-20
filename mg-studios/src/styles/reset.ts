@@ -7,8 +7,6 @@ export const StyledReset = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     
-  }
-
   button {
     cursor: pointer;
     border: none;
@@ -20,8 +18,7 @@ export const StyledReset = createGlobalStyle`
    
     outline: none;
     
-}
-
+  }
   a {
     cursor: pointer;
     border: none;
@@ -30,12 +27,19 @@ export const StyledReset = createGlobalStyle`
     text-decoration: none;
     
   }
+  a:hover{
+    text-decoration: none;
+  }
 
   ul,
   ol,
   li {
     list-style: none;
   }
+ 
+    
+  }
+
   .App{
     height: 100vh;
   }

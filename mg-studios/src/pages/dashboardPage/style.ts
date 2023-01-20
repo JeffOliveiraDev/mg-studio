@@ -33,6 +33,7 @@ export const StyledDashboard = styled.div`
     color: var(--orange);
   }
   .TitleHeader {
+    display: flex;
     color: var(--light);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
   }
@@ -92,6 +93,15 @@ export const StyledDashboard = styled.div`
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
     padding: 20px;
   }
+  .WelcomeMessage {
+    display: flex;
+    flex-direction: column;
+  }
+  .WelcomeMessage h5 {
+    color: var(--light);
+    font-size: var(--font-14);
+  }
+
   .BoxLeftAbout span {
     color: var(--orange);
   }
@@ -129,8 +139,7 @@ export const StyledDashboard = styled.div`
     }
   }
 
-  .BoxLeftAbout h3,
-  h2 {
+  .BoxLeftAbout h2 {
     line-height: 40px;
   }
   .BoxLeftAbout h3 {
@@ -143,9 +152,8 @@ export const StyledDashboard = styled.div`
     font-size: var(--font-24);
   }
   .BoxLeftAbout h4 {
-    /* color: var(--light-dark); */
+    color: var(--light);
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
-    /* font-weight: 900; */
   }
   .BoxLeftAbout p {
     color: var(--light);
@@ -184,7 +192,7 @@ export const StyledDashboard = styled.div`
   }
   .BoxCards {
     width: 80%;
-    height: 300px;
+    height: 400px;
     margin: auto;
     display: flex;
     position: relative;
@@ -241,9 +249,11 @@ export const StyledDashboard = styled.div`
     max-width: 230px;
     font-size: 1.4rem;
     transition: all 0.3s;
+    color: var(--light);
   }
   .CardMiddleTitleArrow:hover {
-    transform: scale(1.1) translate(10px);
+    color: var(--light);
+    transform: scale(1.1) translate(15px);
   }
 
   .CardMiddleTitleArrow svg {
@@ -260,12 +270,34 @@ export const StyledDashboard = styled.div`
   .CardRight:hover {
     box-shadow: 0px 0px 4px 4px var(--light);
   }
+  @media (max-width: 897px) {
+    .BoxCards {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .CardLeft {
+      width: 100%;
+    }
+    .CardMiddle {
+      width: 100%;
+      height: 300px;
+    }
+    .CardRight {
+      width: 100%;
+    }
+    .BoxAboutUs {
+      margin-top: 150px;
+    }
+  }
 
   .InsideCard {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding: 20px;
+
     justify-content: space-between;
     box-shadow: 0 0 16px #333;
     border-radius: 20px;
@@ -282,7 +314,6 @@ export const StyledDashboard = styled.div`
     align-items: center;
     color: var(--dark-brown);
     transition: all 0.3s;
-    text-decoration: none;
   }
   .InsideCard a:hover {
     transform: scale(1.1) translate(10px);
@@ -299,58 +330,7 @@ export const StyledDashboard = styled.div`
     margin-top: 40px;
     justify-content: space-between;
   }
-  @media (max-width: 840px) {
-    .BoxCards {
-      /* height: fit-content; */
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
-    .CardLeft {
-      width: 100%;
-    }
-    .CardMiddle {
-      width: 100%;
-      height: 50%;
-    }
-    .CardRight {
-      width: 100%;
-    }
-    .BoxAboutUs {
-      margin-top: 150px;
-    }
-  }
 
-  @media (max-width: 662px) {
-    .BoxAboutUs {
-      margin-top: 200px;
-    }
-  }
-  @media (max-width: 615px) {
-    .BoxAboutUs {
-      margin-top: 280px;
-    }
-  }
-  @media (max-width: 405px) {
-    .BoxAboutUs {
-      margin-top: 320px;
-    }
-  }
-  @media (max-width: 357px) {
-    .BoxAboutUs {
-      margin-top: 380px;
-    }
-  }
-  @media (max-width: 300px) {
-    .BoxAboutUs {
-      margin-top: 410px;
-    }
-  }
-  /* @media (max-width: 340px) {
-    .BoxAboutUs {
-      margin-top: 90%;
-    }
-  } */
   .BoxAboutAndHow {
     display: flex;
     flex-direction: column;
@@ -735,7 +715,7 @@ export const StyledDashboard = styled.div`
 
   .ContactUsBottom {
     width: 100%;
-    height: 526px;
+    height: 400px;
   }
   .InsideFooter {
     text-align: center;
@@ -841,7 +821,6 @@ export const StyledDashboard = styled.div`
   }
   .FooterIcons a:hover {
     transform: scale(1.3);
-    text-decoration: none;
   }
   .FooterLeft {
     color: var(--light);

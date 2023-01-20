@@ -1,11 +1,12 @@
 import { AiFillCheckCircle } from "react-icons/ai";
 import img18 from "../../assets/apto industrial-18-min.webp";
+import img12 from "../../assets/apto industrial-12-min.webp";
 
 export const AboutUs = () => {
   return (
     <div className="BoxAboutUs">
       <div className="BoxImgAboutUs">
-        <img src={img18} alt="" />
+        <img src={img12} alt="" />
       </div>
       <div id="about" className="BoxTextAboutUs">
         <h4>QUEM SOMOS</h4>
